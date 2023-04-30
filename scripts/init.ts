@@ -4,12 +4,12 @@ import prettier from "prettier";
 import { ethers } from "ethers";
 
 const INIT_CONFIG = {
-  rpcUrl: "https://api.stackup.sh/v1/node/API_KEY",
+  rpcUrl: "https://eth-goerli.g.alchemy.com/v2/" + process.env.ALCHEMY_API_KEY,
   signingKey: new ethers.Wallet(ethers.utils.randomBytes(32)).privateKey,
-  entryPoint: "0x5FF137D4b0FDCD49DcA30c7CF57E578a026d2789",
+  entryPoint: "0x0576a174D229E3cFA37253523E645A78A0C91B57",
   simpleAccountFactory: "0x9406Cc6185a346906296840746125a0E44976454",
   paymaster: {
-    rpcUrl: "https://api.stackup.sh/v1/paymaster/API_KEY",
+    rpcUrl: "",
     context: {},
   },
 };
